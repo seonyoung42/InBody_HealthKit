@@ -17,7 +17,7 @@ extension Date {
     
     func toStringWithTime() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         dateFormatter.timeZone = TimeZone(abbreviation: "KST")
         return dateFormatter.string(from: self)
     }

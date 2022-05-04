@@ -16,8 +16,10 @@ extension HKFitzpatrickSkinType {
         case .IV: return "IV"
         case .V: return "V"
         case .VI: return "VI"
-        case .notSet: return "Unknown"
-      }
+        case .notSet: return "notSet"
+        @unknown default:
+            return "unknown"
+        }
     }
 }
 

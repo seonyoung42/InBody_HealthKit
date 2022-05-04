@@ -12,4 +12,5 @@ struct Workout: Codable {
     let startTime: String
     let endTime: String
     let source: String
+    let product: String
 }

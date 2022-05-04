@@ -1,22 +1,20 @@
 //
-//  HKBiologicalSex+String.swift
+//  HKWheelchairUse+String.swift
 //  InBody_HealthKit
 //
-//  Created by 장선영 on 2022/04/29.
+//  Created by 장선영 on 2022/05/04.
 //
 
 import HealthKit
 
-extension HKBiologicalSex {
+extension HKWheelchairUse {
     var stringRepresentation: String {
         switch self {
+        case .no: return "no"
+        case .yes: return "yes"
         case .notSet: return "notSet"
-        case .female: return "Female"
-        case .male: return "Male"
-        case .other: return "Other"
         @unknown default:
             return "unknown"
         }
     }
 }
-

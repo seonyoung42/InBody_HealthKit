@@ -22,6 +22,19 @@
 		2B71BCA2281B687300F48CCE /* HKFitzpatrickSkinType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B71BCA1281B687300F48CCE /* HKFitzpatrickSkinType+String.swift */; };
 		2B71BCD1281B7CAA00F48CCE /* LoadCategoryTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B71BCD0281B7CAA00F48CCE /* LoadCategoryTypeData.swift */; };
 		2B71BCD8281B864100F48CCE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B71BCD7281B864100F48CCE /* Category.swift */; };
+		2B86072628211E1F00DB7E09 /* HKCategoryValueSleepAnalysis+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86072528211E1F00DB7E09 /* HKCategoryValueSleepAnalysis+String.swift */; };
+		2B8607292822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8607282822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift */; };
+		2B86072B282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86072A282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift */; };
+		2B86072D2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86072C2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift */; };
+		2B86072F2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86072E2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift */; };
+		2B8607312822091000DB7E09 /* HKCategoryValueMenstrualFlow+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8607302822091000DB7E09 /* HKCategoryValueMenstrualFlow+String.swift */; };
+		2B8607332822098A00DB7E09 /* HKCategoryValueContraceptive+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8607322822098A00DB7E09 /* HKCategoryValueContraceptive+String.swift */; };
+		2B860735282214D900DB7E09 /* HKCategoryValueSeverity+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B860734282214D900DB7E09 /* HKCategoryValueSeverity+String.swift */; };
+		2B8607372822161D00DB7E09 /* HKCategoryValuePresence+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8607362822161D00DB7E09 /* HKCategoryValuePresence+String.swift */; };
+		2B8607392822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8607382822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift */; };
+		2B86073B282217BE00DB7E09 /* HKCategoryValue+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */; };
+		2B86073D28221ECA00DB7E09 /* HKActivityMoveMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073C28221ECA00DB7E09 /* HKActivityMoveMode+String.swift */; };
+		2B86073F28221F5200DB7E09 /* HKWheelchairUse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073E28221F5200DB7E09 /* HKWheelchairUse+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +55,19 @@
 		2B71BCA1281B687300F48CCE /* HKFitzpatrickSkinType+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKFitzpatrickSkinType+String.swift"; sourceTree = "<group>"; };
 		2B71BCD0281B7CAA00F48CCE /* LoadCategoryTypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCategoryTypeData.swift; sourceTree = "<group>"; };
 		2B71BCD7281B864100F48CCE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2B86072528211E1F00DB7E09 /* HKCategoryValueSleepAnalysis+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueSleepAnalysis+String.swift"; sourceTree = "<group>"; };
+		2B8607282822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueAppleStandHour+String.swift"; sourceTree = "<group>"; };
+		2B86072A282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueLowCardioFitnessEvent+String.swift"; sourceTree = "<group>"; };
+		2B86072C2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueCervicalMucusQuality+String.swift"; sourceTree = "<group>"; };
+		2B86072E2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueOvulationTestResult+String.swift"; sourceTree = "<group>"; };
+		2B8607302822091000DB7E09 /* HKCategoryValueMenstrualFlow+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueMenstrualFlow+String.swift"; sourceTree = "<group>"; };
+		2B8607322822098A00DB7E09 /* HKCategoryValueContraceptive+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueContraceptive+String.swift"; sourceTree = "<group>"; };
+		2B860734282214D900DB7E09 /* HKCategoryValueSeverity+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueSeverity+String.swift"; sourceTree = "<group>"; };
+		2B8607362822161D00DB7E09 /* HKCategoryValuePresence+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValuePresence+String.swift"; sourceTree = "<group>"; };
+		2B8607382822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueAppetiteChanges+String.swift"; sourceTree = "<group>"; };
+		2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValue+String.swift"; sourceTree = "<group>"; };
+		2B86073C28221ECA00DB7E09 /* HKActivityMoveMode+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKActivityMoveMode+String.swift"; sourceTree = "<group>"; };
+		2B86073E28221F5200DB7E09 /* HKWheelchairUse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWheelchairUse+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +136,8 @@
 				2B71BC9D281B683700F48CCE /* HKBloodType+String.swift */,
 				2B71BC9F281B685C00F48CCE /* HKBiologicalSex+String.swift */,
 				2B71BCA1281B687300F48CCE /* HKFitzpatrickSkinType+String.swift */,
+				2B86073C28221ECA00DB7E09 /* HKActivityMoveMode+String.swift */,
+				2B86073E28221F5200DB7E09 /* HKWheelchairUse+String.swift */,
 			);
 			path = "Characteristic+Extenstions";
 			sourceTree = "<group>";
@@ -126,6 +154,7 @@
 		2B71BCD3281B7EF500F48CCE /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2B8607272821207900DB7E09 /* CategoryValue+Extensions */,
 				2B71BCD7281B864100F48CCE /* Category.swift */,
 				2B71BCD0281B7CAA00F48CCE /* LoadCategoryTypeData.swift */,
 			);
@@ -135,9 +164,9 @@
 		2B71BCD4281B7EFD00F48CCE /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				2B860742282220A900DB7E09 /* Workout+Extensions */,
 				2B71BC99281A841A00F48CCE /* Workout.swift */,
 				2B71BC97281A785F00F48CCE /* LoadWorkoutTypeData.swift */,
-				2B71BC95281A761300F48CCE /* HKWorkoutActivityType+String.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -145,10 +174,36 @@
 		2B71BCD5281B7F0E00F48CCE /* Characteristic */ = {
 			isa = PBXGroup;
 			children = (
-				2B71BC9B281B675F00F48CCE /* LoadCharacteristicTypeData.swift */,
 				2B71BC94281A75F300F48CCE /* Characteristic+Extenstions */,
+				2B71BC9B281B675F00F48CCE /* LoadCharacteristicTypeData.swift */,
 			);
 			path = Characteristic;
+			sourceTree = "<group>";
+		};
+		2B8607272821207900DB7E09 /* CategoryValue+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B86072528211E1F00DB7E09 /* HKCategoryValueSleepAnalysis+String.swift */,
+				2B8607282822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift */,
+				2B86072A282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift */,
+				2B86072C2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift */,
+				2B86072E2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift */,
+				2B8607302822091000DB7E09 /* HKCategoryValueMenstrualFlow+String.swift */,
+				2B8607322822098A00DB7E09 /* HKCategoryValueContraceptive+String.swift */,
+				2B860734282214D900DB7E09 /* HKCategoryValueSeverity+String.swift */,
+				2B8607362822161D00DB7E09 /* HKCategoryValuePresence+String.swift */,
+				2B8607382822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift */,
+				2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */,
+			);
+			path = "CategoryValue+Extensions";
+			sourceTree = "<group>";
+		};
+		2B860742282220A900DB7E09 /* Workout+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B71BC95281A761300F48CCE /* HKWorkoutActivityType+String.swift */,
+			);
+			path = "Workout+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,18 +285,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8607292822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift in Sources */,
 				2B71BC9C281B676000F48CCE /* LoadCharacteristicTypeData.swift in Sources */,
 				2B71BC8E281A74EC00F48CCE /* Quantity.swift in Sources */,
 				2B71BC96281A761300F48CCE /* HKWorkoutActivityType+String.swift in Sources */,
+				2B86072D2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift in Sources */,
 				2B71BC9A281A841A00F48CCE /* Workout.swift in Sources */,
+				2B86072F2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift in Sources */,
+				2B86073B282217BE00DB7E09 /* HKCategoryValue+String.swift in Sources */,
 				2B71BC93281A759C00F48CCE /* Date+Extensions.swift in Sources */,
 				2B71BC90281A753600F48CCE /* LoadQuantityTypeData.swift in Sources */,
 				2B71BCA2281B687300F48CCE /* HKFitzpatrickSkinType+String.swift in Sources */,
+				2B86072628211E1F00DB7E09 /* HKCategoryValueSleepAnalysis+String.swift in Sources */,
+				2B8607332822098A00DB7E09 /* HKCategoryValueContraceptive+String.swift in Sources */,
+				2B86073D28221ECA00DB7E09 /* HKActivityMoveMode+String.swift in Sources */,
+				2B8607372822161D00DB7E09 /* HKCategoryValuePresence+String.swift in Sources */,
 				2B71BCD1281B7CAA00F48CCE /* LoadCategoryTypeData.swift in Sources */,
+				2B8607312822091000DB7E09 /* HKCategoryValueMenstrualFlow+String.swift in Sources */,
+				2B86073F28221F5200DB7E09 /* HKWheelchairUse+String.swift in Sources */,
 				2B71BC8B281A732800F48CCE /* HealthKitSetupManager.swift in Sources */,
+				2B8607392822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift in Sources */,
 				2B71BCD8281B864100F48CCE /* Category.swift in Sources */,
 				2B71BCA0281B685C00F48CCE /* HKBiologicalSex+String.swift in Sources */,
+				2B860735282214D900DB7E09 /* HKCategoryValueSeverity+String.swift in Sources */,
 				2B71BC9E281B683700F48CCE /* HKBloodType+String.swift in Sources */,
+				2B86072B282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift in Sources */,
 				2B71BC98281A785F00F48CCE /* LoadWorkoutTypeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
