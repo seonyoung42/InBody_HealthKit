@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B421823282B4857009ADA05 /* DailyQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B421822282B4857009ADA05 /* DailyQuantity.swift */; };
 		2B71BC6C281A345200F48CCE /* InBody_HealthKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B71BC6A281A345100F48CCE /* InBody_HealthKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B71BC89281A72BC00F48CCE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B71BC88281A72BC00F48CCE /* HealthKit.framework */; };
 		2B71BC8B281A732800F48CCE /* HealthKitSetupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B71BC8A281A732800F48CCE /* HealthKitSetupManager.swift */; };
@@ -35,9 +36,12 @@
 		2B86073B282217BE00DB7E09 /* HKCategoryValue+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */; };
 		2B86073D28221ECA00DB7E09 /* HKActivityMoveMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073C28221ECA00DB7E09 /* HKActivityMoveMode+String.swift */; };
 		2B86073F28221F5200DB7E09 /* HKWheelchairUse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86073E28221F5200DB7E09 /* HKWheelchairUse+String.swift */; };
+		2B86078728226F5400DB7E09 /* HKCategoryValueEnvironmentalAudioExposureEvent+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86078628226F5400DB7E09 /* HKCategoryValueEnvironmentalAudioExposureEvent+String.swift */; };
+		2B86078928226FAD00DB7E09 /* HKCategoryValueHeadphoneAudioExposureEvent+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86078828226FAD00DB7E09 /* HKCategoryValueHeadphoneAudioExposureEvent+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B421822282B4857009ADA05 /* DailyQuantity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuantity.swift; sourceTree = "<group>"; };
 		2B71BC67281A345100F48CCE /* InBody_HealthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InBody_HealthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B71BC6A281A345100F48CCE /* InBody_HealthKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InBody_HealthKit.h; sourceTree = "<group>"; };
 		2B71BC6B281A345200F48CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValue+String.swift"; sourceTree = "<group>"; };
 		2B86073C28221ECA00DB7E09 /* HKActivityMoveMode+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKActivityMoveMode+String.swift"; sourceTree = "<group>"; };
 		2B86073E28221F5200DB7E09 /* HKWheelchairUse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWheelchairUse+String.swift"; sourceTree = "<group>"; };
+		2B86078628226F5400DB7E09 /* HKCategoryValueEnvironmentalAudioExposureEvent+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueEnvironmentalAudioExposureEvent+String.swift"; sourceTree = "<group>"; };
+		2B86078828226FAD00DB7E09 /* HKCategoryValueHeadphoneAudioExposureEvent+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKCategoryValueHeadphoneAudioExposureEvent+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				2B71BC8D281A74EC00F48CCE /* Quantity.swift */,
+				2B421822282B4857009ADA05 /* DailyQuantity.swift */,
 				2B71BC8F281A753600F48CCE /* LoadQuantityTypeData.swift */,
 			);
 			path = Quantity;
@@ -194,6 +201,8 @@
 				2B8607362822161D00DB7E09 /* HKCategoryValuePresence+String.swift */,
 				2B8607382822166300DB7E09 /* HKCategoryValueAppetiteChanges+String.swift */,
 				2B86073A282217BE00DB7E09 /* HKCategoryValue+String.swift */,
+				2B86078628226F5400DB7E09 /* HKCategoryValueEnvironmentalAudioExposureEvent+String.swift */,
+				2B86078828226FAD00DB7E09 /* HKCategoryValueHeadphoneAudioExposureEvent+String.swift */,
 			);
 			path = "CategoryValue+Extensions";
 			sourceTree = "<group>";
@@ -286,9 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8607292822078E00DB7E09 /* HKCategoryValueAppleStandHour+String.swift in Sources */,
+				2B86078928226FAD00DB7E09 /* HKCategoryValueHeadphoneAudioExposureEvent+String.swift in Sources */,
 				2B71BC9C281B676000F48CCE /* LoadCharacteristicTypeData.swift in Sources */,
 				2B71BC8E281A74EC00F48CCE /* Quantity.swift in Sources */,
 				2B71BC96281A761300F48CCE /* HKWorkoutActivityType+String.swift in Sources */,
+				2B421823282B4857009ADA05 /* DailyQuantity.swift in Sources */,
 				2B86072D2822082D00DB7E09 /* HKCategoryValueCervicalMucusQuality+String.swift in Sources */,
 				2B71BC9A281A841A00F48CCE /* Workout.swift in Sources */,
 				2B86072F2822089000DB7E09 /* HKCategoryValueOvulationTestResult+String.swift in Sources */,
@@ -308,6 +319,7 @@
 				2B71BCD8281B864100F48CCE /* Category.swift in Sources */,
 				2B71BCA0281B685C00F48CCE /* HKBiologicalSex+String.swift in Sources */,
 				2B860735282214D900DB7E09 /* HKCategoryValueSeverity+String.swift in Sources */,
+				2B86078728226F5400DB7E09 /* HKCategoryValueEnvironmentalAudioExposureEvent+String.swift in Sources */,
 				2B71BC9E281B683700F48CCE /* HKBloodType+String.swift in Sources */,
 				2B86072B282207F000DB7E09 /* HKCategoryValueLowCardioFitnessEvent+String.swift in Sources */,
 				2B71BC98281A785F00F48CCE /* LoadWorkoutTypeData.swift in Sources */,

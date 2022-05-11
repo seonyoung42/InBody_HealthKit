@@ -11,8 +11,8 @@ import HealthKit
 open class LoadWorkoutTypeData {
     
     // MARK : 데이터 불러오기 - Workout
-    public class func getWorkoutData(start: Date?,
-                                     end: Date?,
+    public class func getWorkoutData(startDate: Date?,
+                                     endDate: Date?,
                                      limit: Int,
                                      ascending: Bool,
                                      option: HKQueryOptions,
@@ -20,7 +20,9 @@ open class LoadWorkoutTypeData {
         
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate,
                                             ascending: ascending)
-        let predicate = HKQuery.predicateForSamples(withStart: start, end: end, options: option)
+        let predicate = HKQuery.predicateForSamples(withStart: startDate,
+                                                    end: endDate,
+                                                    options: option)
         
         let query = HKSampleQuery(sampleType: .workoutType(),
                                   predicate: predicate,
@@ -52,52 +54,32 @@ open class LoadWorkoutTypeData {
             let end = $0.endDate.toStringWithTime()
             let source = $0.sourceRevision.source.name
             let product = $0.sourceRevision.productType
-                
+            let totalDistance = $0.totalDistance?.doubleValue(for: HKUnit.mile())
+            let totalEnergyBurned = $0.totalEnergyBurned?.doubleValue(for: .joule())
+            let duration = $0.duration.description
+            let workoutEvent = $0.workoutEvents?.count
+            let totalFlightsClimbed = $0.totalFlightsClimbed?.doubleValue(for: .count())
+            let totalSwimingStrokeCount = $0.totalSwimmingStrokeCount?.doubleValue(for: .count())
+            
             let encoder = JSONEncoder()
             encoder.outputFormatting = [.prettyPrinted]
             
-            let data = Workout(name: name,
+            let data = Workout(workoutName: name,
                                startTime: start,
                                endTime: end,
-                               source: source,
-                               product: product ?? "unknown")
+                               dataSource: source,
+                               duration: duration,
+                               totalDistance: totalDistance,
+                               totalEnergyBurned: totalEnergyBurned,
+                               workoutEvent: workoutEvent,
+                               totalFlightsClimbed: totalFlightsClimbed,
+                               totalSwimmingStrokecount: totalSwimingStrokeCount)
             
             let jsonData = try? encoder.encode(data)
             
             if let jsonData = jsonData,
                let jsonString = String(data: jsonData, encoding: .utf8) {
-                let keyUser = $0.metadata?[HKMetadataKeyWasUserEntered]
                 dataList.append(jsonString)
-                print("""
-                    
-                    < HKObject >
-                    UUID (HealthKit object 식별자) : \($0.uuid),
-                    sourceRevision (HealthKit object 생성한 app 또는 기기)
-                        - sourceName (sample source의 이름) : \($0.sourceRevision.source.name),
-                        - bundleIdentifier (sample source의 식별자) : \($0.sourceRevision.source.bundleIdentifier),
-                        - version (sample 저장한 app이나 기기의 버전, optional) : \($0.sourceRevision.version),
-                        - productType(sample저장하는데 사용한 기기, optional) : \($0.sourceRevision.productType),
-                        - operatingSystem (sample 저장하는데 사용된 운영체제) : \($0.sourceRevision.operatingSystemVersion),
-                    device (HealthKit object에 대한 데이터를 생성한 장치, optional) : \($0.device),
-                    metadata (optional, 데이터마다 다른 metadata 출력) : \($0.metadata)
-                        - metadataWasUserEntered (sample이 사용자에 의해 입력된 건지) :\(keyUser),
-                    
-                    < Sample >
-                    startDate (sample 시작 시간) : \($0.startDate),
-                    endDate (sample 끝난 시간) : \($0.endDate),
-                    hasUndeterminedDuration (sample에 알 수 없는 기간 있는지 여부) : \($0.hasUndeterminedDuration),
-                    sampleType : \($0.sampleType)
-                    
-                    < Workout >
-                    duration (운동 시간): \($0.duration),
-                    totalDistance (운동 중 이동한 총 거리, optional): \($0.totalDistance),
-                    totalEnergyBurned (운동 중 소모된 총 활성화에너지, optional): \($0.totalEnergyBurned),
-                    workoutActivityType (운동 유형): \($0.workoutActivityType.stringRepresentation),
-                    workoutEvent (운동 이벤트 개체의 유형, optional): \($0.workoutEvents),
-                    totalFlightsClimbed (운동 중 올라간 총 계단 수, optional): \($0.totalFlightsClimbed),
-                    totalSwimmingStrokeCount (운동의 총 stroke 수, optional): \($0.totalSwimmingStrokeCount)
-                    """)
-              
             } else {
                 print("오류 : Workout -> JSON")
             }

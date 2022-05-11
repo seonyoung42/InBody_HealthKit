@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Quantity: Codable {
-    let dataName: String
-    let value: String
-    let startTime: String
-    let endTime: String
-    let source: String
-}
+//struct Quantity: Codable {
+//    let dataName: String
+//    let value: String
+//    let startTime: String
+//    let endTime: String
+//    let source: String
+//}

@@ -12,7 +12,7 @@ open class LoadCharacteristicTypeData {
     
     static let healthStore = HKHealthStore()
     
-    // - 생물학적 성별
+    // MARK : - 생물학적 성별
     public static func getBiologicalSex() -> String {
         
         do {
@@ -23,8 +23,8 @@ open class LoadCharacteristicTypeData {
         }
     }
     
-    // - 생일
-    public static func getDateOfBirth() -> String? {
+    // MARK : - 생일
+    public static func getDateOfBirth() -> String {
         
         do {
             let dateOfBirth = try healthStore.dateOfBirthComponents().date!.toStringWithoutTime()
@@ -34,7 +34,7 @@ open class LoadCharacteristicTypeData {
         }
     }
     
-    // - 혈액형
+    // MARK : - 혈액형
     public static func getBloodType() -> String {
         
         do {
@@ -45,7 +45,7 @@ open class LoadCharacteristicTypeData {
         }
     }
     
-    // - 피부타입 (피츠패트릭피부타입)
+    // MARK : - 피부타입 (피츠패트릭피부타입)
     public static func getSkinType() -> String {
         
         do {
@@ -57,7 +57,7 @@ open class LoadCharacteristicTypeData {
         }
     }
     
-    // - 사용자 활동 모드
+    // MARK : - 사용자 활동 모드
     public static func getActivityMoveMode() -> String {
         do {
             let activityMoveMode = try healthStore.activityMoveMode().activityMoveMode.stringRepresentation
@@ -67,7 +67,7 @@ open class LoadCharacteristicTypeData {
         }
     }
     
-    // 휠체어 사용 유무
+    // MARK : - 휠체어 사용 유무
     public static func getWheelChairUsage() -> String {
         do {
             let wheelChairUse = try healthStore.wheelchairUse().wheelchairUse.stringRepresentation

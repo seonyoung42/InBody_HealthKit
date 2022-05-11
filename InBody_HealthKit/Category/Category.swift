@@ -9,8 +9,8 @@ import Foundation
 
 struct Category: Codable {
     let name: String
-    let `case` : String
     let startTime: String
     let endTime: String
-    let source: String
+    let `case` : String
+    let dataSource: String
 }

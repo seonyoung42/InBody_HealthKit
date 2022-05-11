@@ -20,14 +20,17 @@ enum CategoryValue {
     case severity(HKCategoryValueSeverity)
     case presence(HKCategoryValuePresence)
     case appetiteChanges(HKCategoryValueAppetiteChanges)
+    case environmentalAudioExposureEvent(HKCategoryValueEnvironmentalAudioExposureEvent)
+    case headphoneAudioExposureEvent(HKCategoryValueHeadphoneAudioExposureEvent)
     case undefined(HKCategoryValue)
 }
 
 open class LoadCategoryTypeData {
-    // MARK : 수면 데이터 불러오기 - Category
+    
+    // MARK : CategoryType 데이터 불러오기
     public class func getCategoryTypeData(sampleType: HKCategoryType,
-                                           startTime: Date?,
-                                           endTime: Date?,
+                                           startDate: Date?,
+                                           endDate: Date?,
                                            limit: Int,
                                            ascending: Bool,
                                            option: HKQueryOptions,
@@ -35,12 +38,12 @@ open class LoadCategoryTypeData {
         
         let dataName = sampleType.identifier.components(separatedBy: "Identifier")[1]
         
-        // start 시점부터 내림차순/오름차순으로 정렬
+        ///  start 시점부터 acending이 true면 내림차순 false면 오름차순으로 정렬
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
                                               ascending: ascending)
-        
-        let predicate = HKQuery.predicateForSamples(withStart: startTime,
-                                                    end: endTime,
+        ///
+        let predicate = HKQuery.predicateForSamples(withStart: startDate,
+                                                    end: endDate,
                                                     options: option)
         
         let sampleQuery = HKSampleQuery(sampleType: sampleType,
@@ -63,7 +66,7 @@ open class LoadCategoryTypeData {
     }
     
     // MARK : CategoryType -> JSON 으로 인코딩
-    private static func encodeCategoryToJSON(dataArray: [HKCategorySample], dataName: String) -> [String]? {
+    private class func encodeCategoryToJSON(dataArray: [HKCategorySample], dataName: String) -> [String]? {
         var dataList = [String]()
 
         dataArray.forEach {
@@ -74,12 +77,12 @@ open class LoadCategoryTypeData {
             
             let encoder = JSONEncoder()
             encoder.outputFormatting = [.prettyPrinted]
-            
+         
             let data = Category(name: dataName,
-                                case: categoryCase,
                                 startTime: start,
                                 endTime: end,
-                                source: source)
+                                case: categoryCase,
+                                dataSource: source)
 
             let jsonData = try? encoder.encode(data)
 
@@ -189,10 +192,12 @@ private extension LoadCategoryTypeData {
         case .presence(let value): return value.stringRepresentation
         case .appetiteChanges(let value): return value.stringRepresentation
         case .undefined(let value): return value.stringRepresentation
+        case .environmentalAudioExposureEvent(let value): return value.stringRepresentation
+        case .headphoneAudioExposureEvent(let value): return value.stringRepresentation
         }
     }
     
-    // MARK : CategoryType의 CategoryValue 찾기
+    // MARK : CategoryType의 CategoryValue 반환
     class func getCategoryValue(type: String, rawValue: Int) -> CategoryValue {
         switch type {
         case "SleepAnalysis": return CategoryValue.sleepAnalysis(HKCategoryValueSleepAnalysis(rawValue: rawValue)!)
@@ -205,6 +210,8 @@ private extension LoadCategoryTypeData {
         case "Severity": return CategoryValue.severity(HKCategoryValueSeverity(rawValue: rawValue)!)
         case "Presence": return CategoryValue.presence(HKCategoryValuePresence(rawValue: rawValue)!)
         case "AppetiteChanges": return CategoryValue.appetiteChanges(HKCategoryValueAppetiteChanges(rawValue: rawValue)!)
+        case "EnvironmentalAudioExposureEvent": return CategoryValue.environmentalAudioExposureEvent(HKCategoryValueEnvironmentalAudioExposureEvent(rawValue: rawValue)!)
+        case "HeadphoneAudioExposureEvent": return CategoryValue.headphoneAudioExposureEvent(HKCategoryValueHeadphoneAudioExposureEvent(rawValue: rawValue)!)
         default:
             return CategoryValue.undefined(HKCategoryValue(rawValue: rawValue)!)
         }

@@ -8,9 +8,14 @@
 import Foundation
 
 struct Workout: Codable {
-    let name: String
+    let workoutName: String
     let startTime: String
     let endTime: String
-    let source: String
-    let product: String
+    let dataSource: String
+    let duration: String
+    let totalDistance: Double?
+    let totalEnergyBurned: Double?
+    let workoutEvent: Int?
+    let totalFlightsClimbed: Double?
+    let totalSwimmingStrokecount: Double?
 }
